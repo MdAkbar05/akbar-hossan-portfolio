@@ -1,26 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suranna&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #090923;
+  --color-secondary: #1f2a38;
+  --color-tartiary: #111827;
+  --color-quarterary: #eeeeee;
+  --color-mute: #a6a6a6;
+  --color-extra: #09122c;
+  --color-background: #0a0a0a;
+  --color-foreground: #ededed;
+}
+/* set screen size  */
+@theme {
+  --breakpoint-sm: 340px;
+  --breakpoint-md: 650px;
+  --breakpoint-lg: 780px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer components {
+  .outershadow {
+    transition-property: all;
+    transition-duration: 500ms;
+    background-color: #241383; /* Replace with your theme's bg-primary value */
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgb(36, 19, 131);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  .outershadow:hover {
+    transition-property: all;
+    transition-duration: 500ms;
+    background-color: #241383; /* Same as above */
+    cursor: pointer;
+    box-shadow: 0px 0px 30px rgb(36, 19, 131);
+  }
+
+  .navButton {
+    padding-left: 0.75rem; /* px-3 */
+    padding-right: 0.75rem;
+    padding-top: 0.375rem; /* py-1.5 */
+    padding-bottom: 0.375rem;
+    border-radius: 0.5rem; /* rounded-lg */
+
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+  .navButtonDark {
+    background-color: var(
+      --color-secondary
+    ); /* Replace with your actual color */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    color: var(--color-quarterary);
+    font-weight: 500; /* font-medium */
+    font-size: 1.125rem; /* text-lg */
+  }
+
+  .button {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    border-radius: 0.5rem;
+    /* Replace with your actual color */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+
+    font-weight: 500; /* font-medium */
+    font-size: 1.125rem; /* text-lg */
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  .buttonReverse {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition-property: all;
+    transition-duration: 300ms;
+  }
+
+  .buttonReverse:hover {
+    background-color: var(--color-primary);
+    color: var(--color-quarterary);
   }
 }
 
+.nameFont {
+  font-family: "Suranna", serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  font-style: normal;
+}
+
+.titleFont {
+  font-family: "Suranna", serif;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  font-style: normal;
+}
+.normalFont {
+  font-family: "Lora", serif;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+/* custom button with tailwindcss  */
+
 body {
-  background: var(--background);
+  scroll-behavior: smooth;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(45deg, #02858c, #217e78);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lightGradient-text {
+  background: -webkit-linear-gradient(45deg, #02949b, #1b4344);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.myborder {
+  border: 2px solid #263952;
+}
+.myborderLight {
+  border: 2px solid #b3bdc9;
+}
+
+/* .gradient-border {
+  border: 4px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, #c7f403, #00ff95 80%);
+} */
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prepin-142ksgu {
+  position: absolute;
+  inset: -20px;
+  border-radius: var(--chakra-radii-2xl);
+  background: rgba(0, 120, 255, 0.15);
+  filter: blur(40px);
+  transform: scale(1.05);
+}
+
+.prepin-gkiw8f {
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  right: 0px;
+  height: 300px;
+  background-image: linear-gradient(
+    rgba(0, 40, 120, 0.4),
+    rgba(0, 20, 60, 0.2) 50%,
+    rgba(0, 10, 30, 0)
+  );
+  filter: blur(40px);
+  z-index: 0;
 }

@@ -1,0 +1,58 @@
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import { BsCalendarDateFill } from "react-icons/bs";
+
+const SkillItem = ({ item }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to toggle modal
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen); // Toggle the modal state
+  };
+
+  return (
+    <div className="flex flex-col w-full justify-center items-center myborder bg-secondary p-4 rounded-lg shadow-md">
+      <div
+        className="flex items-center gap-4 cursor-pointer"
+        onClick={toggleModal} // Open modal on click
+      >
+        <Image
+          className="w-14 h-14 bg-quarterary p-1 rounded-md"
+          src={item.src.src}
+          alt={item.name}
+          width="100"
+          height="100"
+        />
+        <div className="font-light md:text-lg sm:text-base">{item.name}</div>
+        <BsCalendarDateFill size={20} />
+        <div className="font-light md:text-lg sm:text-base">{item.time}</div>
+      </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-1/2">
+            <h2 className="text-xl font-semibold mb-4 text-primary">
+              Activities for {item.name}
+            </h2>
+            <ul className="font-light md:text-lg sm:text-base mt-4 bg-tartiary p-4 rounded-lg shadow-inner">
+              {item?.activity?.map((activity, index) => (
+                <li key={index} className="py-1 text-quarterary">
+                  {activity}
+                </li>
+              ))}
+            </ul>
+            <button
+              className="mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-all"
+              onClick={toggleModal} // Close modal on click
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SkillItem;

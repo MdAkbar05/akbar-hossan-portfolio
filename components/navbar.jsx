@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Education", href: "/educations", prefetch: true },
     { name: "Achievements", href: "/achievements", prefetch: true },
     { name: "Services", href: "/services", prefetch: true },
-    { name: "Admin", href: "/panel", prefetch: false },
+    // { name: "Admin", href: "/panel", prefetch: false },
   ];
 
   return (

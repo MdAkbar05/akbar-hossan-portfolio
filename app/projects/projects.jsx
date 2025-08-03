@@ -6,7 +6,7 @@ import getProjects from "@/lib/api-request/get-projects";
 import returnArray from "@/lib/utils";
 import { CldImage } from "next-cloudinary";
 import { MdSort } from "react-icons/md";
-import Project from "@/components/projects/project";
+
 import ProjectLoader from "@/components/loaders/projectLoader";
 
 const Projects = () => {

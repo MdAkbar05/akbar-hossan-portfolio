@@ -1,14 +1,28 @@
 "use client";
-import btebBoard from "@/public/assets/educations/bteb-board.png";
-import comillaBoard from "@/public/assets/educations/comilla-board.png";
-import JscCertificate from "@/public/assets/educations/JSC-Certificate-2017-MD-Akbar-Hossan.jpeg";
-import PscCertificate from "@/public/assets/educations/PSC-Certificate.jpg";
-import psc from "@/public/assets/educations/PSC.png";
-import SscCertificate from "@/public/assets/educations/SSC-Certificate-2020-MD-Akbar-Hossan.jpeg";
-import Image from "next/image";
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
 export default function Pricing({ selectedService, onClose }) {
   // State to track the selected certificate
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    //  Please use your own credentials from emailjs or i will recive your email
+
+    emailjs
+      .sendForm(
+        "service_bsofnsk", // service id
+        "template_jsn7k4o", // template id
+        form.current,
+        "YYUEj3Vu4X1dPQkJs" // public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <>

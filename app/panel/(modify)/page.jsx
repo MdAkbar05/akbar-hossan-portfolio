@@ -1,5 +1,6 @@
 "use client";
 
+import ContactModal from "@/components/contactModal";
 import deleteProject from "@/lib/api-request/delete-project";
 import getProjects from "@/lib/api-request/get-projects";
 import returnArray from "@/lib/utils";
@@ -48,33 +49,35 @@ export default function Page() {
   };
 
   return (
-    <div className="w-full mx-auto p-6 m-4 bg-quarterary shadow-lg rounded-lg">
+    <div className="w-full mx-auto p-6 m-4 dark:bg-primary dark:text-quarterary bg-quarterary text-primary shadow-lg rounded-lg">
       <h2 className="text-2xl font-semibold text-primary mb-4">Project List</h2>
-      <table className="w-full bg-primary border border-gray-200 text-start">
+      <table className="w-full dark:bg-extra bg-slate-200 border  text-start">
         <thead>
-          <tr className="bg-tartiary text-justify">
-            <th className="border p-2">Title</th>
-            <th className="border p-2">Language</th>
-            <th className="border p-2">Image</th>
-            <th className="border p-2">Link</th>
-            <th className="border p-2">Actions</th>
+          <tr className=" text-justify">
+            <th className="border-2 p-2 border-gray-400">Title</th>
+            <th className="border-2 p-2 border-gray-400">Language</th>
+            <th className="border-2 p-2 border-gray-400">Image</th>
+            <th className="border-2 p-2 border-gray-400">Link</th>
+            <th className="border-2 p-2 border-gray-400">Actions</th>
           </tr>
         </thead>
         <tbody>
           {projects.map((project) => (
-            <tr key={project._id} className="border">
-              <td className="border p-2">{project.title}</td>
-              <td className="border p-2">{returnArray(project.lan)}</td>
-              <td className="border p-2">
+            <tr key={project._id} className="border border-gray-300">
+              <td className="border-2 p-2 border-gray-300">{project.title}</td>
+              <td className="border-2 p-2 border-gray-300">
+                {returnArray(project.lan)}
+              </td>
+              <td className="border-2 p-2 border-gray-300">
                 <CldImage
                   src={project.img}
                   alt={project.title}
                   width={20}
                   height={20}
-                  className="w-16 h-10 object-cover"
+                  className="w-auto h-20 object-cover"
                 />
               </td>
-              <td className="border p-2">
+              <td className="border-2 p-2 border-gray-300">
                 <a
                   href={project.link}
                   target="_blank"
@@ -83,7 +86,7 @@ export default function Page() {
                   Link
                 </a>
               </td>
-              <td className="border p-2 space-x-2">
+              <td className="border-2 p-2 border-gray-300 space-x-2">
                 <button
                   onClick={() => handleEdit(project._id)}
                   className="bg-blue-500 text-white px-3 py-1 rounded-md"

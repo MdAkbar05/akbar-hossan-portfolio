@@ -1,15 +1,16 @@
-"use client";
-
-import Logo from "@/public/assets/img/logo.png";
+import Logo from "@/public/logo.svg";
 import Image from "next/image";
-import { redirect } from "next/navigation";
-export const AvatarLogo = () => (
-  <Image
-    src={Logo.src}
-    width={50}
-    height={50}
-    alt="Naruto Uzumaki"
-    cursor={"pointer"}
-    onClick={() => redirect("/")}
-  />
-);
+import { useRouter } from "next/navigation";
+export const AvatarLogo = ({ scale = 100 }) => {
+  const router = useRouter();
+  return (
+    <Image
+      src={Logo.src}
+      width={50}
+      height={50}
+      className={`scale-${scale} mx-2 cursor-pointer`}
+      alt="Naruto Uzumaki"
+      onClick={() => router.push("/")}
+    />
+  );
+};

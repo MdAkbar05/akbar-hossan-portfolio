@@ -19,7 +19,17 @@ export async function PUT(request, { params }) {
   if (typeof body.lan === "string") {
     body.lan = body.lan.split(",").map((item) => item.trim());
   }
-  console.log(body);
+  // find by id
+  const project = await Project.findById(id);
+
+  if (!project) {
+    return NextResponse.json({ message: "Project not found" }, { status: 404 });
+  }
+  // delete image from Cloudinary
+  if (project.img) {
+    const result = await cloudinary.v2.uploader.destroy(project.img);
+  }
+
   const updatedProject = await Project.findByIdAndUpdate(id, body, {
     new: true,
   });

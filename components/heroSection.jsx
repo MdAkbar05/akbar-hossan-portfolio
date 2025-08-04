@@ -9,7 +9,13 @@ export default function HeroSection() {
     <>
       <div className="text-slate-600 flex sm:flex-col md:flex-row items-center justify-center gap-12 w-full">
         <div className="image sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full overflow-hidden ring-2 ring-slate-600 ">
-          <Image src={Profile} alt="profile" width={600} height={600} />
+          <Image
+            src={Profile}
+            alt="profile"
+            width={600}
+            height={600}
+            className="scale-105"
+          />
         </div>
         <div className="flex flex-col justify-center gap-4 m-0 px-10">
           <div className="space-y-1">

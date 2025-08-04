@@ -13,10 +13,10 @@ export default function HeroSection() {
         </div>
         <div className="flex flex-col justify-center gap-4 m-0 px-10">
           <div className="space-y-1">
-            <h1 className="sm:text-3xl md:text-5xl  titleFont font-semibold text-primary dark:text-quarterary ">
+            <h1 className=" sm:text-3xl md:text-5xl  titleFont font-semibold text-primary dark:text-quarterary ">
               MD. Akbar Hossan
             </h1>
-            <h2 className="sm:text-sm md:text-lg normalFont text-gray-800 dark:text-quarterary">
+            <h2 className="dark:bright-text  sm:text-sm md:text-lg normalFont gradient-text dark:text-quarterary">
               a React JS and Next Js Developer
             </h2>
           </div>

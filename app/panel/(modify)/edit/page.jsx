@@ -71,7 +71,7 @@ export default function EditProject() {
     }
 
     updateProject(projectId, project);
-    router.push(`/dashboard/projects`);
+    router.push(`/panel`);
   };
 
   return (
@@ -84,72 +84,80 @@ export default function EditProject() {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 w-full">
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Title
-            </label>
-            <input
-              type="text"
-              name="title"
-              value={project?.title}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
-            />
-          </div>
+        <>
+          <form onSubmit={handleSubmit} className="space-y-4 w-full">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Title
+              </label>
+              <input
+                type="text"
+                name="title"
+                value={project?.title}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+              />
+            </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Technologies (comma separated)
-            </label>
-            <input
-              type="text"
-              name="lan"
-              value={project?.lan}
-              onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Description
-            </label>
-            <input
-              type="text"
-              name="desc"
-              value={project?.desc}
-              onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Source Link
-            </label>
-            <input
-              type="url"
-              name="srcLink"
-              value={project?.srcLink}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Project Link
-            </label>
-            <input
-              type="url"
-              name="link"
-              value={project?.link}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
-            />
-          </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Technologies (comma separated)
+              </label>
+              <input
+                type="text"
+                name="lan"
+                value={project?.lan}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Description
+              </label>
+              <input
+                type="text"
+                name="desc"
+                value={project?.desc}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Source Link
+              </label>
+              <input
+                type="url"
+                name="srcLink"
+                value={project?.srcLink}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">
+                Project Link
+              </label>
+              <input
+                type="url"
+                name="link"
+                value={project?.link}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+              />
+            </div>
 
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+              Update Project
+            </button>
+          </form>
           <div className="mt-4 border-2 border-gray-300 rounded-lg p-4">
             <CldUploadWidget
               uploadPreset="project_images"
@@ -164,7 +172,7 @@ export default function EditProject() {
                     className="w-full bg-secondary text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     onClick={() => open()}
                   >
-                    Upload Project Image
+                    Upload New Image
                   </button>
                 );
               }}
@@ -181,13 +189,7 @@ export default function EditProject() {
               </div>
             )}
           </div>
-          <button
-            type="submit"
-            className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >
-            Update Project
-          </button>
-        </form>
+        </>
       )}
     </div>
   );

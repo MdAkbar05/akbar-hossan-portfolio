@@ -1,29 +1,7 @@
-"use client";
 import emailjs from "@emailjs/browser";
+import { useRouter } from "next/navigation";
 export default function Pricing({ selectedService, onClose }) {
-  // State to track the selected certificate
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    //  Please use your own credentials from emailjs or i will recive your email
-
-    emailjs
-      .sendForm(
-        "service_bsofnsk", // service id
-        "template_jsn7k4o", // template id
-        form.current,
-        "YYUEj3Vu4X1dPQkJs" // public key
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
+  const router = useRouter();
   return (
     <>
       {/* Modal for Certificate */}
@@ -56,10 +34,20 @@ export default function Pricing({ selectedService, onClose }) {
                 </ul>
 
                 <div className="mt-6 text-center flex justify-center items-center gap-4 ">
-                  <span className="inline-block bg-green-700  text-white px-4 py-2 rounded-lg text-lg font-semibold shadow-md transition-all duration-500 cursor-pointer">
+                  <span
+                    className="inline-block bg-green-700  text-white px-4 py-2 rounded-lg text-lg font-semibold shadow-md transition-all duration-500 cursor-pointer"
+                    onClick={() =>
+                      router.push(
+                        `/contacts?plan=${selectedService?.title}+${selectedService?.price}${selectedService?.description}`
+                      )
+                    }
+                  >
                     Mail Plan
                   </span>
-                  <span className="inline-block  bg-red-700   text-white px-4 py-2 rounded-lg text-lg transition-all duration-500 font-semibold shadow-md cursor-pointer">
+                  <span
+                    className="inline-block  bg-red-700   text-white px-4 py-2 rounded-lg text-lg transition-all duration-500 font-semibold shadow-md cursor-pointer"
+                    onClick={() => router.push("/contacts")}
+                  >
                     Contacts
                   </span>
                 </div>

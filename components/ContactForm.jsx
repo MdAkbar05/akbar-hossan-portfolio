@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const ContactForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -149,10 +150,13 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="px-8 py-4 bg-blue-200 dark:bg-zinc-800">
-          <div className="text-sm text-blue-900 dark:text-blue-300 text-center">
-            Don't have an account?
+          <div
+            className="text-sm text-blue-900 dark:text-blue-300 text-center"
+            onClick={() => router.push("/")}
+          >
+            Go back to
             <a className="font-medium underline" href="#">
-              Sign up
+              Home
             </a>
           </div>
         </div>

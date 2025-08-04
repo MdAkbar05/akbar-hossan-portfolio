@@ -71,11 +71,13 @@ export default function Education() {
           >
             {/* Education Details */}
             <div className="text-primary dark:text-slate-300">
-              <h2 className="text-2xl font-semibold dark:text-quarterary text-secondary mb-2 text-center">
+              <h2 className="text-lg md:text-2xl font-semibold dark:text-quarterary text-secondary mb-2 text-center">
                 {edu.degree}
               </h2>
-              <p className="text-lg  mb-1 text-center ">
-                <span className="  ">Institution:</span> {edu.institution}
+              <p className="text-base md:text-lg  mb-1 text-center italic ">
+                {/* not italic  */}
+                <span className="not-italic">Institution:</span>{" "}
+                {edu.institution}
               </p>
               <p className="text-lg  mb-1 text-center">
                 Passing Year:

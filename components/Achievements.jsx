@@ -77,8 +77,8 @@ export default function Achievements() {
             className="bg-slate-200 dark:bg-extra p-6 rounded-lg shadow-lg outershadow transition-all duration-300 flex sm:flex-col md:flex-row items-center justify-between  border dark:border-secondary border-slate-300 "
           >
             {/* Education Details */}
-            <div>
-              <h2 className="text-2xl font-medium   dark:text-quarterary text-primary mb-2 text-center">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-xl md:text-2xl font-medium   dark:text-quarterary text-primary mb-2 text-center">
                 {edu.course}
               </h2>
 
@@ -86,14 +86,14 @@ export default function Achievements() {
                 <span className=" ">
                   Issued By <br />
                 </span>{" "}
-                <span className=" gradient-text font-semibold">
+                <span className=" gradient-text  font-semibold">
                   {edu.issuedBy}
                 </span>{" "}
               </p>
 
               <p className="text-lg dark:text-mute text-secondary text-center font-medium">
                 <span className=" ">Date of Issue:</span>{" "}
-                <span className=" ">{edu.date}</span>{" "}
+                <span className=" font-semibold">{edu.date}</span>{" "}
               </p>
               <p className="text-lg dark:text-mute text-secondary text-center font-medium">
                 <span className=" ">Duration:</span>{" "}

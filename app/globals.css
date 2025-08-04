@@ -138,6 +138,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.bright-text {
+  background: -webkit-linear-gradient(45deg, #00c951, #b7e629);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .lightGradient-text {
   background: -webkit-linear-gradient(45deg, #02949b, #1b4344);
   -webkit-background-clip: text;

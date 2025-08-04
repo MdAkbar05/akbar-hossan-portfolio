@@ -11,7 +11,6 @@ import ProjectLoader from "@/components/loaders/projectLoader";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  console.log(projects);
   const [activeRecent, setActiveRecent] = useState(false);
   const [activeAZ, setActiveAZ] = useState(false);
   const [activeGraphics, setActiveGraphics] = useState(false);
@@ -116,6 +115,8 @@ const Projects = () => {
       {isLoading && (
         <div className="col-span-2 text-center">
           <ProjectLoader />
+          <ProjectLoader />
+          <ProjectLoader />
         </div>
       )}
 
@@ -126,17 +127,17 @@ const Projects = () => {
           {projects?.map((p, i) => (
             <div
               key={i}
-              className="grid md:grid-cols-2 sm:grid-cols-1 grid-rows-1 gap-4 col-span-2  sm:p-4 md:p-2 border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra"
+              className="grid md:grid-cols-2 sm:grid-cols-1 grid-rows-1 sm:gap-0 md:gap-4 col-span-2  sm:p-4 md:p-2 border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra"
             >
-              <div className="relative ">
+              <div className="md:relative sm:h-44 md:h-full">
                 <CldImage
                   src={p.img}
                   alt={p.title}
                   width={1000}
                   height={1000}
-                  className="object-cover h-full rounded-md dark:rounded-2xl"
+                  className="object-cover sm:h-44 md:h-full w-auto rounded-md dark:rounded-2xl"
                 />
-                <div className="absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-tartiary from-5% to-transparent"></div>
+                <div className="md:block sm:hidden absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-tartiary from-5% to-transparent"></div>
               </div>
               <div>
                 <div className="flex flex-col gap-4 items-start justify-between h-full py-4 ">
@@ -151,14 +152,14 @@ const Projects = () => {
                         .map((sentence, index) => (
                           <li
                             key={index}
-                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1"
+                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-decimal "
                           >
                             {sentence.trim()}.
                           </li>
                         ))}
                   </p>
 
-                  <div className="font-thin text-sm text-center flex gap-x-4">
+                  <div className="font-thin text-sm text-center flex gap-x-4 sm:gap-y-3 md:gap-y-0  flex-wrap">
                     {returnArray(p.lan)}
                   </div>
 
@@ -171,7 +172,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-      ) : (
+      ) : isLoading ? null : (
         <div className="text-red-500 text-center mt-5 text-2xl font-semibold ">
           No Projects Found!
         </div>

@@ -18,21 +18,21 @@ const SkillItem = ({ item }) => {
   };
 
   return (
-    <div className="relative flex flex-col md:flex-row w-full justify-between items-center dark:myborder myborderLight  bg-slate-200 text-secondary dark:text-quarterary dark:bg-extra p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 outershadow">
+    <div className="relative flex flex-col md:flex-row w-full justify-between items-center dark:myborder myborderLight  bg-slate-200 text-secondary dark:text-quarterary dark:bg-extra md:p-4 sm:p-3 gap-2 md:gap-0 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 outershadow">
       {/* Horizontal Skill Card */}
       <div
-        className="flex items-center gap-4 cursor-pointer w-full md:w-2/3"
+        className="flex sm:flex-col flex-row items-center  gap-4 cursor-pointer w-full md:w-2/3"
         onClick={toggleModal} // Open modal on click
       >
         <Image
-          className="w-16 h-16 bg-quarterary  p-2 rounded-full shadow-md"
+          className="md:w-16 md:h-16 sm:w-10 sm:h-10 bg-quarterary  p-2 rounded-full shadow-md"
           src={item.src.src}
           alt={item.name}
           width="100"
           height="100"
         />
-        <div className="flex flex-col">
-          <h3 className="text-lg font-bold dark:text-quarterary text-primary uppercase">
+        <div className="flex flex-col items-center md:items-start ">
+          <h3 className="text-center md:text-lg sm:text-base font-bold dark:text-quarterary text-primary uppercase">
             {item.name}
           </h3>
           <div className="flex items-center gap-2 text-sm text-gray-500">
@@ -42,7 +42,7 @@ const SkillItem = ({ item }) => {
         </div>
       </div>
       <button
-        className="px-4 py-2 dark:bg-primary bg-quarterary dark:text-white text-primary rounded-md dark:hover:bg-tartiary hover:bg-slate-300 cursor-pointer transition-all"
+        className="md:px-4 md:py-2 sm:px-2 sm:py-1 dark:bg-primary bg-quarterary dark:text-white text-primary rounded-md dark:hover:bg-tartiary hover:bg-slate-300 cursor-pointer transition-all"
         onClick={toggleModal}
       >
         View Activities

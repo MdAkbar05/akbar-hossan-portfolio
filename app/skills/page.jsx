@@ -16,7 +16,7 @@ const Skills = () => {
             skills
           </span>
         </h1>
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 place-items-center py-2">
+        <div className=" grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 md:gap-4 sm:gap-2 place-items-center py-2">
           {skills.map((skill) => (
             <SkillItem key={skill.id} item={skill} />
           ))}

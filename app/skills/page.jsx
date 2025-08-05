@@ -3,7 +3,7 @@ import { skills } from "./skillsData";
 import SkillItem from "@/components/skill-item";
 
 export const metadata = {
-  title: "My skills in mordern technologies",
+  title: "Skills and Technologies",
   description: "Here are some of my skills in modern technologies",
 };
 const Skills = () => {

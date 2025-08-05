@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex justify-center items-center bg-quarterary dark:bg-primary/95   backdrop-blur-xl sticky top-0 z-50 dark:shadow-secondary shadow-sm">
       <nav className="container mx-auto flex justify-between items-center text-primary dark:text-quarterary ">
-        <AvatarLogo scale={150} />
+        <AvatarLogo key={1} scale={150} />
         {/* for Desktop  */}
         <ul className="sm:hidden md:flex gap-6 px-4 py-2 rounded-md text-lg">
           <Link href="/">

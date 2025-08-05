@@ -15,10 +15,11 @@ const Footer = () => {
         className=" container mx-auto  flex items-center justify-center"
       >
         {/* Copy right text  */}
-        Copyright
-        <AvatarLogo />
-        <p className="sm:text-sm md:text-base text-center font-thin  md:pb-0">
-          © 2025 MD_Akbar_Hossan. All rights reserved{" "}
+
+        <p className="sm:text-[10px] md:text-base text-center font-thin  md:pb-0 flex items-center justify-center">
+          <span>Copyright</span>
+          <AvatarLogo />
+          <span>© 2025 MD_Akbar_Hossan. All rights reserved </span>
         </p>
       </div>
     </footer>

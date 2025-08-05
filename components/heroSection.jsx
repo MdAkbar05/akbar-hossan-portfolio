@@ -33,13 +33,13 @@ export default function HeroSection() {
           <div className="space-x-4 py-2">
             <Link
               href={"/contacts"}
-              className="titleFont hover:bg-green-500 hover:text-white cursor-pointer transition-all duration-300  bg-extra dark:bg-quarterary dark:text-primary py-3 px-4 text-white rounded-md w-fit outershadow sm:text-sm md:text-balance"
+              className="titleFont hover:bg-green-500 hover:text-white cursor-pointer transition-all duration-300  bg-extra dark:bg-quarterary dark:text-primary py-1 px-4 text-white rounded-md w-fit outershadow sm:text-sm md:text-balance"
             >
               HIRE ME
             </Link>
             <Link
               href={"mailto:akbar.hossan.official@gmail.com"}
-              className="titleFont myborder text-primary cursor-pointer transition-all duration-300  hover:bg-extra  dark:text-white dark:bg-primary hover:text-white py-3 px-4  rounded-md w-fit sm:text-sm md:text-balance"
+              className="titleFont myborder text-primary cursor-pointer transition-all duration-300  hover:bg-extra  dark:text-white dark:bg-primary hover:text-white py-1 px-4  rounded-md w-fit sm:text-sm md:text-balance"
             >
               SEND EMAIL
             </Link>

@@ -16,9 +16,9 @@ const Footer = () => {
       >
         {/* Copy right text  */}
 
-        <p className="sm:text-[10px] md:text-base text-center font-thin  md:pb-0 flex items-center justify-center">
+        <p className="sm:text-[10px] md:text-base text-center font-thin  md:pb-0 flex items-center justify-center space-x-1">
           <span>Copyright</span>
-          <AvatarLogo />
+          <AvatarLogo key={1} size={10} />
           <span>© 2025 MD_Akbar_Hossan. All rights reserved </span>
         </p>
       </div>

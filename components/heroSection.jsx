@@ -8,13 +8,15 @@ export default function HeroSection() {
   return (
     <>
       <div className="text-slate-600 flex sm:flex-col md:flex-row items-center justify-center gap-12 w-full">
-        <div className="image sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full overflow-hidden ring-2 ring-slate-600 ">
+        <div className="relative sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full overflow-hidden ring-2 ring-slate-600 ">
           <Image
             src={Profile}
-            alt="profile"
-            width={600}
-            height={600}
-            className="scale-105"
+            alt="MD. AKbar Hossan Full Stack Developer Portfolio"
+            fill
+            sizes="100%"
+            className="object-cover"
+            placeholder="blur"
+            priority
           />
         </div>
         <div className="flex flex-col justify-center gap-4 m-0 px-10">

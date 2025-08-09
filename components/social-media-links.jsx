@@ -36,6 +36,8 @@ const SocialMediaLinks = () => {
           <Link
             href={socialMedia.href}
             target="_blank"
+            id={socialMedia.name}
+            aria-label={socialMedia.name}
             rel="noopener noreferrer"
           >
             <socialMedia.icon size={24} padding={1} />

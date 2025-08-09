@@ -5,6 +5,7 @@ import ict from "@/public/assets/sponsor-img/ict_division_logo-iJ6uC05B.webp";
 import ostad from "@/public/assets/sponsor-img/OSTAD_LOGO.webp";
 import dyd from "@/public/assets/sponsor-img/DYD_LOGO.webp";
 import lws from "@/public/assets/sponsor-img/lwsLogo.svg";
+import Image from "next/image";
 
 const Sponsor = () => {
   const data = [
@@ -46,15 +47,17 @@ const Sponsor = () => {
         {data.slice(0, 4).map((sponsor) => (
           <div
             key={sponsor.id}
-            className="flex items-center justify-center bg-slate-200  dark:myborder myborderLight p-1 rounded-lg"
+            className="relative w-28 h-14 flex items-center justify-center bg-slate-200  dark:myborder myborderLight p-1 rounded-lg"
           >
-            <img
-              src={sponsor.img.src}
+            <Image
+              src={sponsor.img}
               alt={sponsor.title}
-              className="w-20 h-auto px-1 py-0.5"
-              loading="lazy"
+              className="object-contain p-3"
+              priority
               decoding="async"
               title={sponsor.title}
+              fill
+              sizes="100%"
             />
           </div>
         ))}

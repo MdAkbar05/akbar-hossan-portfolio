@@ -31,6 +31,9 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
+      name="toggleTheme"
+      id="toggleTheme"
+      aria-label="toggle theme"
       className="p-2 rounded  text-black dark:text-white cursor-pointer"
     >
       {theme === "dark" ? <FaSun size={20} /> : <FaMoon size={20} />}

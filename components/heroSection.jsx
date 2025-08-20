@@ -3,8 +3,11 @@ import Sponsor from "./Sponsor";
 import Image from "next/image";
 import Profile from "@/public/assets/img/akbar-hossan-transparent-image3.webp";
 import Link from "next/link";
+import { getNextJsExperianceTime } from "@/lib/utils";
 
 export default function HeroSection() {
+  let nextJsExperianceTime = getNextJsExperianceTime("2025-02-18");
+  let reactJsExperianceTime = getNextJsExperianceTime("2023-10-05");
   return (
     <>
       <div className="text-slate-600 flex sm:flex-col md:flex-row items-center justify-center gap-12 w-full">
@@ -29,8 +32,9 @@ export default function HeroSection() {
             </h2>
           </div>
           <p className="sm:text-lg md:text-2xl nameFont text-primary dark:text-quarterary">
-            I've been working as a React JS developer for 1+ years <br /> and
-            Next JS developer for 6+ months.
+            I've been working as a React JS developer for{" "}
+            {reactJsExperianceTime} <br /> and Next JS developer for{" "}
+            {nextJsExperianceTime}.
           </p>
           <div className="space-x-4 py-2">
             <Link

@@ -11,6 +11,7 @@ import { GiSkills } from "react-icons/gi";
 import { MdCastForEducation } from "react-icons/md";
 import { TbCertificate } from "react-icons/tb";
 import { IoHomeOutline } from "react-icons/io5";
+import ViewCounter from "./ViewCounter";
 
 const Navbar = () => {
   const [isMenu, setIsMenu] = useState(false);
@@ -94,6 +95,7 @@ const Navbar = () => {
         {/* for mobile  */}
 
         <div className=" flex gap-2 items-center justify-center">
+          <ViewCounter />
           <DarkModeToggle />
           <div className="sm:flex md:hidden">
             <button onClick={() => setIsMenu(!isMenu)}>MENU</button>

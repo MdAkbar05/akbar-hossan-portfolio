@@ -133,8 +133,7 @@ const Projects = () => {
                 <CldImage
                   src={p.img}
                   alt={p.title}
-                  width={1000}
-                  height={1000}
+                  fill
                   className="object-cover sm:h-44 md:h-full w-auto rounded-md dark:rounded-2xl"
                 />
                 <div className="md:block sm:hidden absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-tartiary from-5% to-transparent"></div>

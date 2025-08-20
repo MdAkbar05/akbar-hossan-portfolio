@@ -1,7 +1,5 @@
 import Services from "@/components/Services";
 
-import { FaCode, FaDatabase, FaMobileAlt } from "react-icons/fa";
-
 const metadata = {
   title: "Services",
   description: "Here are some of my services",

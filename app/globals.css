@@ -101,7 +101,7 @@
   font-family: "Suranna";
   font-style: normal;
   font-weight: 400;
-  src: url("./../public/fonts/suranna-v14-latin-regular.woff2") format("woff2"); /*Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../public/fonts/suranna-v14-latin-regular.woff2") format("woff2"); /*Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* lora-regular - latin */
 @font-face {
@@ -109,7 +109,7 @@
   font-family: "Lora";
   font-style: normal;
   font-weight: 300;
-  src: url("/../public/fonts/lora-v36-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../public/fonts/lora-v36-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 .nameFont {

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { MdVisibility } from "react-icons/md";
 
 const ViewCounter = () => {
   useEffect(() => {
@@ -32,14 +33,20 @@ const ViewCounter = () => {
       );
       const fallbackElement = document.getElementById("views");
       if (fallbackElement) {
-        fallbackElement.textContent = "Not available offline.";
+        fallbackElement.textContent = "Offline";
       }
     }
   }, []);
   return (
     <div>
-      <p className="text-gray-400">
-        Visited: <span id="views">Loading...</span>
+      <p className="text-gray-400 flex items-center gap-2">
+        <MdVisibility size={24} />{" "}
+        <span
+          className="w-6 h-6 border-4 border-blue-500
+                        border-t-transparent rounded-full 
+                        animate-spin"
+          id="views"
+        ></span>
       </p>
     </div>
   );

@@ -41,7 +41,7 @@ const ViewCounter = () => {
     <div>
       <p className="text-gray-400 flex items-center gap-2">
         <MdVisibility size={24} />{" "}
-        <span className=" animate-spin" id="views">
+        <span className=" animate-pulse" id="views">
           Loadings..
         </span>
       </p>

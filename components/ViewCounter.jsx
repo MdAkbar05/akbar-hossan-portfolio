@@ -41,12 +41,9 @@ const ViewCounter = () => {
     <div>
       <p className="text-gray-400 flex items-center gap-2">
         <MdVisibility size={24} />{" "}
-        <span
-          className="w-6 h-6 border-4 border-blue-500
-                        border-t-transparent rounded-full 
-                        animate-spin"
-          id="views"
-        ></span>
+        <span className=" animate-spin" id="views">
+          Loadings..
+        </span>
       </p>
     </div>
   );

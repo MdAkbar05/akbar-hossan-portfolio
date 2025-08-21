@@ -1,4 +1,4 @@
-import { Geist, Geist_Mon, Suranna } from "next/font/google";
+import { Geist } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "@/components/navbar";

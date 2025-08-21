@@ -18,6 +18,9 @@ export default function HeroSection() {
             fill
             sizes="100%"
             className="object-cover"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             placeholder="blur"
             priority
           />

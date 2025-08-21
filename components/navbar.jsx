@@ -52,44 +52,45 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full  flex justify-center items-center bg-quarterary dark:bg-primary/95   backdrop-blur-xl sticky top-0 z-50 dark:shadow-secondary shadow-sm">
+    <div className="w-full  flex justify-center items-center bg-white dark:bg-primary/95   backdrop-blur-xl sticky top-0 z-50 dark:shadow-secondary shadow-sm">
       <nav className="container mx-auto flex justify-between items-center text-primary dark:text-quarterary px-2">
         <AvatarLogo key={1} size={14} />
         {/* for Desktop  */}
         <ul className="sm:hidden md:flex gap-6 px-4 py-2 rounded-md text-lg">
-          <Link href="/">
-            <li
-              className={`group relative px-3 cursor-pointer ${
-                router === "/"
-                  ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary rounded-lg text-sm font-medium shadow-md"
-                  : ""
-              }`}
-            >
+          <li
+            className={`group relative px-3 cursor-pointer ${
+              router === "/"
+                ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary rounded-lg text-sm font-medium shadow-md"
+                : ""
+            }`}
+          >
+            <Link href="/">
               <div className="flex h-9 w-9 items-center justify-center rounded-full hover:text-blue-500">
                 <IoHomeOutline size={28} />
               </div>
               <span className="absolute top-0 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-primary">
                 Home
               </span>
-            </li>
-          </Link>
+            </Link>
+          </li>
           {navigation.map((nav, index) => (
-            <Link key={index} prefetch={nav.prefetch} href={nav.href}>
-              <li
-                className={`group relative px-3 cursor-pointer ${
-                  router === nav.href
-                    ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary rounded-lg text-sm font-medium shadow-md"
-                    : ""
-                }`}
-              >
+            <li
+              key={index}
+              className={`group relative px-3 cursor-pointer ${
+                router === nav.href
+                  ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary rounded-lg text-sm font-medium shadow-md"
+                  : ""
+              }`}
+            >
+              <Link prefetch={nav.prefetch} href={nav.href}>
                 <div className="flex h-9 w-9 items-center justify-center rounded-full hover:text-blue-500">
                   {nav.icon}
                 </div>
                 <span className="absolute top-0 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-primary">
                   {nav.name}
                 </span>
-              </li>
-            </Link>
+              </Link>
+            </li>
           ))}
         </ul>
         {/* for mobile  */}

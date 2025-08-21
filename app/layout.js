@@ -55,7 +55,7 @@ export const metadata = {
     siteName: "Akbar Hossan Portfolio",
     images: [
       {
-        url: "https://res-console.cloudinary.com/dsuvjwkbp/thumbnails/v1/image/upload/v1754389159/aHZqaXlwbnhtb3BiZWJlaXBuYmQ=/drilldown", // Recommend creating an OG image
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.jpg`, // Recommend creating an OG image
         width: 1200,
         height: 630,
         alt: "Akbar Hossan Full Stack Developer Portfolio",

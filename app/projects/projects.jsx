@@ -129,12 +129,12 @@ const Projects = () => {
               key={i}
               className="grid md:grid-cols-2 sm:grid-cols-1 grid-rows-1 sm:gap-0 md:gap-4 col-span-2  sm:p-4 md:p-2 border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra"
             >
-              <div className="md:relative sm:h-44 md:h-full">
+              <div className="relative sm:h-44 md:h-56 lg:h-full">
                 <CldImage
                   src={p.img}
                   alt={p.title}
                   fill
-                  className="object-cover sm:h-44 md:h-full w-auto rounded-md dark:rounded-2xl"
+                  className="object-cover  rounded-md dark:rounded-2xl"
                 />
                 <div className="md:block sm:hidden absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-tartiary from-5% to-transparent"></div>
               </div>

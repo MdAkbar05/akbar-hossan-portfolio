@@ -24,6 +24,10 @@ export const metadata = {
     "Professional portfolio of Akbar Hossan, a skilled Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. Explore projects, skills, and contact information.",
   keywords: [
     "Akbar Hossan",
+    "MD. Akbar Hossan",
+    "akbar",
+    "hossan",
+    "developer",
     "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
@@ -55,7 +59,7 @@ export const metadata = {
     siteName: "Akbar Hossan Portfolio",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.jpg`, // Recommend creating an OG image
+        url: `/og-image.jpg`, // Recommend creating an OG image
         width: 1200,
         height: 630,
         alt: "Akbar Hossan Full Stack Developer Portfolio",

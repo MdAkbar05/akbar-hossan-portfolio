@@ -140,10 +140,10 @@ const Projects = () => {
               </div>
               <div>
                 <div className="flex flex-col gap-4 items-start justify-between h-full py-4 ">
-                  <h2 className="sm:text-sm md:text-2xl dark:gradient-text lightGradient-text sm:font-normal md:font-bold uppercase text-center  py-1">
+                  <h2 className="sm:text-sm md:text-2xl dark:gradient-text lightGradient-text sm:font-semibold md:font-bold uppercase text-center   py-1">
                     {p?.title}
                   </h2>
-                  <p className="sm:text-sm md:text-base text-gray-400  py-1">
+                  <p className="sm:text-sm md:text-base text-gray-400  py-1 ">
                     {p?.desc &&
                       p.desc
                         .split(".")
@@ -151,7 +151,7 @@ const Projects = () => {
                         .map((sentence, index) => (
                           <li
                             key={index}
-                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-decimal "
+                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-decimal shadow-md"
                           >
                             {sentence.trim()}.
                           </li>

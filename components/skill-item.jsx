@@ -42,7 +42,7 @@ const SkillItem = ({ item }) => {
         </div>
       </div>
       <button
-        className="md:px-4 md:py-2 sm:px-2 sm:py-1 dark:bg-primary bg-quarterary dark:text-white text-primary rounded-md dark:hover:bg-tartiary hover:bg-slate-300 cursor-pointer transition-all"
+        className="md:px-4 md:py-2 sm:px-2 sm:py-1 dark:bg-primary bg-quarterary dark:text-white text-primary rounded-md dark:hover:bg-tartiary hover:bg-slate-300 cursor-pointer transition-all border border-gray-300 dark:border-gray-600"
         onClick={toggleModal}
       >
         View Activities

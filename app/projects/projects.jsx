@@ -36,7 +36,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="container mx-auto bg-quarterary dark:bg-primary text-white dark:text-quarterary py-4">
+    <div className="container mx-auto bg-quarterary dark:bg-primary text-white dark:text-quarterary py-6">
       <div className="grid grid-cols-1 grid-rows-1  py-4">
         {/* sort by  */}
         <div className=" ">
@@ -140,7 +140,7 @@ const Projects = () => {
               </div>
               <div>
                 <div className="flex flex-col gap-4 items-start justify-between h-full py-4 ">
-                  <h2 className="sm:text-sm md:text-2xl dark:gradient-text lightGradient-text sm:font-semibold md:font-bold uppercase text-center   py-1">
+                  <h2 className="sm:text-lg md:text-2xl dark:gradient-text lightGradient-text sm:font-semibold md:font-bold uppercase text-center   py-1">
                     {p?.title}
                   </h2>
                   <p className="sm:text-sm md:text-base text-gray-400  py-1 ">
@@ -151,9 +151,9 @@ const Projects = () => {
                         .map((sentence, index) => (
                           <li
                             key={index}
-                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-decimal shadow-md"
+                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-none shadow-md"
                           >
-                            {sentence.trim()}.
+                            {"🟢 " + sentence.trim()}.
                           </li>
                         ))}
                   </p>

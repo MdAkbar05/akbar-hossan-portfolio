@@ -8,7 +8,7 @@ export const metadata = {
 };
 const Skills = () => {
   return (
-    <section className="container mx-auto bg-quarterary dark:bg-primary text-primary dark:text-quarterary">
+    <section className="container mx-auto bg-quarterary dark:bg-primary text-primary dark:text-quarterary py-6">
       <div className="grid grid-cols-1 grid-rows-1  py-4 ">
         <h1 className="text-3xl font-bold text-center py-2">
           Lets see{" "}

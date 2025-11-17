@@ -32,7 +32,7 @@ export async function GET(request) {
     const sortQuery = searchParams.get("query");
 
     let filter = {}; // Default filter (fetch all)
-    let sortOption = {}; // Default sorting
+    let sortOption = { createdAt: -1 }; // Default sorting
 
     // Define sorting and filtering logic
     if (sortQuery === "A-Z") {

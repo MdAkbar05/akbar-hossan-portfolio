@@ -8,6 +8,7 @@ import { CldImage } from "next-cloudinary";
 import { MdSort } from "react-icons/md";
 
 import ProjectLoader from "@/components/loaders/projectLoader";
+import { FaHighlighter } from "react-icons/fa";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -143,6 +144,7 @@ const Projects = () => {
                   <h2 className="sm:text-lg md:text-2xl dark:gradient-text lightGradient-text sm:font-semibold md:font-bold uppercase text-center   py-1">
                     {p?.title}
                   </h2>
+
                   <p className="sm:text-sm md:text-base text-gray-400  py-1 ">
                     {p?.desc &&
                       p.desc
@@ -151,12 +153,16 @@ const Projects = () => {
                         .map((sentence, index) => (
                           <li
                             key={index}
-                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-none shadow-md"
+                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-none shadow-md flex items-center gap-2"
                           >
-                            {"🟢 " + sentence.trim()}.
+                            <FaHighlighter /> {sentence.trim()}.
                           </li>
                         ))}
                   </p>
+                  {/* created At date  */}
+                  <span className="text-green-400">
+                    Publication Date: {p?.createdAt.split("T")[0]}
+                  </span>
 
                   <div className="font-thin text-sm text-center flex gap-x-4 sm:gap-y-3 md:gap-y-0  flex-wrap">
                     {returnArray(p.lan)}

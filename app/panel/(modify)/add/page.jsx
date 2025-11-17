@@ -45,7 +45,7 @@ export default function AddProject() {
       srcLink: "",
     });
 
-    router.push(`/dashboard/projects`);
+    router.push(`/panel`);
   };
 
   return (

@@ -21,12 +21,12 @@ export default function Services() {
       img: website,
       features: [
         "Responsive Web Design",
-        "Single Page Application (SPA)",
+        "Single Page Application (SPA) (Contact for Multiple Pages)",
         "SEO-Friendly Markup",
         "Cross-Browser Compatibility",
         "Optimized Performance",
       ],
-      price: "$300 - $800",
+      price: "2500-8000 (BDT)",
     },
     {
       id: 2,
@@ -37,12 +37,12 @@ export default function Services() {
       img: website,
       features: [
         "RESTful API Development",
-        "Database Architecture (MongoDB)",
+        "Database Architecture (MongoDB / POSTGRESQL)",
         "Authentication & Authorization",
         "CRUD Operations",
         "Server Deployment",
       ],
-      price: "$400 - $900",
+      price: "4000-9000 (BDT)",
     },
     {
       id: 3,
@@ -55,10 +55,10 @@ export default function Services() {
         "Frontend & Backend Integration",
         "Admin Panel & Dashboard",
         "Authentication System",
-        "Cloud Deployment (Vercel, Render)",
+        "Cloud Deployment (Vercel, Render) (Also provide own hosting)",
         "Maintenance & Support",
       ],
-      price: "$700 - $1500",
+      price: "8000-15000 (BDT)",
     },
   ];
 

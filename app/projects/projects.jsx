@@ -128,16 +128,16 @@ const Projects = () => {
           {projects?.map((p, i) => (
             <div
               key={i}
-              className="grid md:grid-cols-2 sm:grid-cols-1 grid-rows-1 sm:gap-0 md:gap-4 col-span-2  sm:p-4 md:p-2 border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra"
+              className="flex flex-col md:flex-row sm:gap-0 md:gap-4 col-span-2 max-h-fit sm:p-4 md:p-2 border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra"
             >
-              <div className="relative sm:h-44 md:h-56 lg:h-full">
+              <div className="relative sm:h-44 md:h-56 lg:h-[490px] sm:w-full md:w-1/2 lg:w-1/2 rounded-md dark:rounded-2xl overflow-hidden">
                 <CldImage
                   src={p.img}
                   alt={p.title}
                   fill
                   className="object-cover  rounded-md dark:rounded-2xl"
                 />
-                <div className="md:block sm:hidden absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-tartiary from-5% to-transparent"></div>
+                <div className="md:block sm:hidden absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-quarterary from-5% to-transparent to-50%"></div>
               </div>
               <div>
                 <div className="flex flex-col gap-4 items-start justify-between h-full py-4 ">

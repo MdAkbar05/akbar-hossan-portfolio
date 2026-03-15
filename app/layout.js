@@ -4,12 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer.jsx";
 
-// surannna font config
-// const surannna = Suranna({
-//   variable: "--font-suranna",
-//   subsets: ["latin"],
-// });
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

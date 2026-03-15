@@ -71,11 +71,11 @@ export default function EditProject() {
     }
 
     updateProject(projectId, project);
-    router.push(`/panel`);
+    router.push(`/panel?secret=667466`);
   };
 
   return (
-    <div className="  bg-quarterary text-primary flex flex-col p-6">
+    <div className="  bg-quarterary text-primary dark:bg-primary dark:text-quarterary flex flex-col p-6">
       <h2 className="text-2xl font-semibold  mb-4">Update Project</h2>
       {isLoading ? (
         <div className="flex justify-center items-center h-full">
@@ -87,21 +87,19 @@ export default function EditProject() {
         <>
           <form onSubmit={handleSubmit} className="space-y-4 w-full">
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Title
-              </label>
+              <label className="block text-sm font-medium ">Title</label>
               <input
                 type="text"
                 name="title"
                 value={project?.title}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                className="mt-1 block w-full rounded-md  border border-gray-300 outline-green-600  p-2"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium">
                 Technologies (comma separated)
               </label>
               <input
@@ -109,45 +107,39 @@ export default function EditProject() {
                 name="lan"
                 value={project?.lan}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                className="mt-1 block w-full rounded-md  border border-gray-300 outline-green-600  p-2"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Description
-              </label>
+              <label className="block text-sm font-medium ">Description</label>
               <input
                 type="text"
                 name="desc"
                 value={project?.desc}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                className="mt-1 block w-full rounded-md  border border-gray-300 outline-green-600  p-2"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Source Link
-              </label>
+              <label className="block text-sm font-medium ">Source Link</label>
               <input
                 type="url"
                 name="srcLink"
                 value={project?.srcLink}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                className="mt-1 block w-full rounded-md  border border-gray-300 outline-green-600  p-2"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Project Link
-              </label>
+              <label className="block text-sm font-medium ">Project Link</label>
               <input
                 type="url"
                 name="link"
                 value={project?.link}
                 onChange={handleChange}
                 required
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-2"
+                className="mt-1 block w-full rounded-md  border border-gray-300 outline-green-600  p-2"
               />
             </div>
 

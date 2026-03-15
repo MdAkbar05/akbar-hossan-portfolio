@@ -26,7 +26,7 @@ export default function Services() {
         "Cross-Browser Compatibility",
         "Optimized Performance",
       ],
-      price: "2500-8000 (BDT)",
+      price: "2500-base on requirements (BDT)",
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ export default function Services() {
         "CRUD Operations",
         "Server Deployment",
       ],
-      price: "4000-9000 (BDT)",
+      price: "4000-base on requirements (BDT)",
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ export default function Services() {
         "Cloud Deployment (Vercel, Render) (Also provide own hosting)",
         "Maintenance & Support",
       ],
-      price: "8000-15000 (BDT)",
+      price: "8000-base on requirements (BDT)",
     },
   ];
 

@@ -8,6 +8,7 @@ import { useState } from "react";
 import { GrServices } from "react-icons/gr";
 import { PiProjectorScreenLight } from "react-icons/pi";
 import { GiSkills } from "react-icons/gi";
+import { LuActivity } from "react-icons/lu";
 import { MdCastForEducation } from "react-icons/md";
 import { TbCertificate } from "react-icons/tb";
 import { IoHomeOutline } from "react-icons/io5";
@@ -19,9 +20,15 @@ const Navbar = () => {
 
   const navigation = [
     {
-      name: "Project",
+      name: "Projects",
       href: "/projects",
       icon: <PiProjectorScreenLight size={28} />,
+      prefetch: false,
+    },
+    {
+      name: "Experiences",
+      href: "/experiences",
+      icon: <LuActivity size={28} />,
       prefetch: false,
     },
     {

@@ -45,30 +45,32 @@ export default function Page() {
   };
 
   const handleEdit = (id) => {
-    router.push(`/panel/edit?id=${id}`);
+    router.push(`/panel/edit?id=${id}&secret=667466`);
   };
 
   return (
-    <div className="w-full mx-auto p-6 m-4 dark:bg-primary dark:text-quarterary bg-quarterary text-primary shadow-lg rounded-lg">
-      <h2 className="text-2xl font-semibold text-primary mb-4">Project List</h2>
+    <div className="w-full p-8 dark:bg-primary dark:text-quarterary bg-quarterary text-primary ">
+      <h2 className="text-2xl font-semibold text-primary dark:text-quarterary mb-4">
+        Project List
+      </h2>
       <table className="w-full dark:bg-extra bg-slate-200 border  text-start">
         <thead>
           <tr className=" text-justify">
-            <th className="border-2 p-2 border-gray-400">Title</th>
-            <th className="border-2 p-2 border-gray-400">Language</th>
-            <th className="border-2 p-2 border-gray-400">Image</th>
-            <th className="border-2 p-2 border-gray-400">Link</th>
-            <th className="border-2 p-2 border-gray-400">Actions</th>
+            <th className="border-2 p-2 border-gray-600">Title</th>
+            <th className="border-2 p-2 border-gray-600">Technology</th>
+            <th className="border-2 p-2 border-gray-600">Image</th>
+            <th className="border-2 p-2 border-gray-600">Link</th>
+            <th className="border-2 p-2 border-gray-600">Actions</th>
           </tr>
         </thead>
         <tbody>
           {projects.map((project) => (
-            <tr key={project._id} className="border border-gray-300">
-              <td className="border-2 p-2 border-gray-300">{project.title}</td>
-              <td className="border-2 p-2 border-gray-300">
+            <tr key={project._id} className="border border-gray-600">
+              <td className="border-2 p-2 border-gray-600">{project.title}</td>
+              <td className="border-2 p-2 border-gray-600">
                 {returnArray(project.lan)}
               </td>
-              <td className="border-2 p-2 border-gray-300">
+              <td className="border-2 p-2 border-gray-600">
                 <CldImage
                   src={project.img}
                   alt={project.title}
@@ -77,7 +79,7 @@ export default function Page() {
                   className="w-auto h-20 object-cover"
                 />
               </td>
-              <td className="border-2 p-2 border-gray-300">
+              <td className="border-2 p-2 border-gray-600">
                 <a
                   href={project.link}
                   target="_blank"
@@ -86,16 +88,16 @@ export default function Page() {
                   Link
                 </a>
               </td>
-              <td className="border-2 p-2 border-gray-300 space-x-2">
+              <td className="border-2 p-2 border-gray-600 space-x-2">
                 <button
                   onClick={() => handleEdit(project._id)}
-                  className="bg-blue-500 text-white px-3 py-1 rounded-md"
+                  className="bg-blue-500 text-white px-3 py-1 rounded-md cursor-pointer"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDeleteProject(project._id)}
-                  className="bg-red-500 text-white px-3 py-1 rounded-md"
+                  className="bg-red-500 text-white px-3 py-1 rounded-md cursor-pointer"
                 >
                   {isLoading ? "Deleting" : "Delete"}
                 </button>

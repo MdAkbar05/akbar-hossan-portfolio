@@ -116,7 +116,7 @@ export default function Achievements() {
         {achievementData.reverse().map((edu) => (
           <div
             key={edu.id}
-            className="bg-slate-200 dark:bg-extra p-6 rounded-lg shadow-lg outershadow transition-all duration-300 flex sm:flex-col md:flex-row items-center justify-between  border dark:border-secondary border-slate-300 "
+            className="bg-slate-200 dark:bg-extra p-6 rounded-lg shadow-lg outershadow transition-all duration-300 flex sm:flex-col md:flex-row items-center justify-between  border dark:border-secondary border-slate-300 gap-y-4"
           >
             {/* Education Details */}
             <div className="flex flex-col gap-2">

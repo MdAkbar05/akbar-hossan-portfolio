@@ -137,7 +137,7 @@ const Navbar = () => {
         <div className="sm:hidden md:flex">
           <Link
             href={"/contacts"}
-            className="relative normalFont inline-flex items-center justify-start  px-5 py-2  overflow-hidden font-semibold transition-all bg-tartiary myborder rounded-full hover:bg-white group"
+            className="relative normalFont inline-flex items-center justify-start  px-5 py-2  overflow-hidden font-semibold transition-all bg-green-600 ring-4 ring-secondary rounded-full hover:bg-white group"
           >
             <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
             <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-tartiary ">

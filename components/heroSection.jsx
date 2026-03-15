@@ -6,12 +6,15 @@ import Image from "next/image";
 import Profile from "@/public/assets/img/akbar-hossan-transparent-image3.webp";
 import Link from "next/link";
 import { getNextJsExperienceTime } from "@/lib/utils";
+import ResumeButton from "./ResumeButton";
 
 export default function HeroSection() {
   let nextJsExperienceTime = getNextJsExperienceTime("2025-02-18");
   let reactJsExperienceTime = getNextJsExperienceTime("2023-10-05");
   return (
     <main className="container mx-auto sm:py-16  md:py-32 lg:space-y-28 space-y-8">
+      <ResumeButton />
+      <ResumeButton isLeft />
       <div className="text-slate-600 flex sm:flex-col md:flex-row items-center justify-center gap-12 w-full ">
         <div className="relative sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full overflow-hidden ring-2 ring-slate-600 ">
           <Image

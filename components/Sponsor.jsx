@@ -6,6 +6,7 @@ import ostad from "@/public/assets/sponsor-img/OSTAD_LOGO.webp";
 import dyd from "@/public/assets/sponsor-img/DYD_LOGO.webp";
 import lws from "@/public/assets/sponsor-img/lwsLogo.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sponsor = () => {
   const data = [
@@ -68,9 +69,12 @@ const Sponsor = () => {
               className="flex items-center justify-center bg-slate-200 border-2 border-tartiary  rounded-full w-12 h-12 -mr-10"
             ></div>
           ))}
-          <div className="flex items-center justify-center bg-slate-200 border-2 font-semibold cursor-pointer text-tartiary border-tartiary  rounded-full w-12 h-12 ">
+          <Link
+            href="/achievements"
+            className="flex items-center justify-center bg-slate-200 border-2 font-semibold cursor-pointer text-tartiary border-tartiary  rounded-full w-12 h-12 "
+          >
             view+
-          </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -108,7 +108,7 @@ function ExperiencePage() {
           .map((exp) => (
             <div
               key={exp.id}
-              className="shadow-lg rounded-lg dark:shadow-gray-900 space-y-6"
+              className="shadow-lg  border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra space-y-6"
             >
               {/* Company Info */}
               <div className="flex lg:flex-row flex-col-reverse items-center gap-4 justify-between border-r-4 border-green-600 p-4">

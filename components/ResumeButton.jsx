@@ -7,18 +7,18 @@ function ResumeButton({ isLeft = false }) {
       href="/MD-Akbar-Hossan-React-and-Nextjs-Developer-chittagong-01879808105.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className={`absolute lg:bottom-6 top-16 ${isLeft ? "left-6" : "right-6"} z-50`}
+      className={`absolute  ${isLeft ? "left-6" : "right-6"} sm:top-1/3 z-50`}
     >
       <button
         title={`${isLeft ? "View Resume" : "Download Resume"}`}
         className="p-4
         rounded-full
-        bg-green-700
-        text-green-200
+        bg-blue-700
+        text-blue-200
         font-semibold
-        inset-ring-8 inset-ring-green-600
-        ring-8 ring-green-400
-        drop-shadow-[0_0px_10px_rgba(0,200,0)]
+        inset-ring-8 inset-ring-blue-600
+        ring-8 ring-blue-500
+        drop-shadow-[0_0px_10px_rgba(0,0,255)]
         hover:shadow-green-400/80
         hover:scale-105
         transition

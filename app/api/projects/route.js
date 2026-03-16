@@ -45,15 +45,15 @@ export async function GET(request) {
       filter = {
         lan: {
           $in: [
-            "JavaScript" ||
-              "JS" ||
-              "ReactJS" ||
-              "React.js" ||
-              "Tailwind" ||
-              "Next.js" ||
-              "Node.js" ||
-              "HTML" ||
-              "CSS",
+            /javascript/i,
+            /js/i,
+            /reactjs/i,
+            /react\.js/i,
+            /tailwind/i,
+            /next\.js/i,
+            /node\.js/i,
+            /html/i,
+            /css/i,
           ],
         },
       }; // Filter projects where "Web" is in the lan array

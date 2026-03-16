@@ -37,7 +37,7 @@ export async function GET(request) {
     // Define sorting and filtering logic
     if (sortQuery === "A-Z") {
       sortOption = { title: 1 }; // Ascending order by title
-    } else if (sortQuery === "Recents") {
+    } else if (sortQuery === "Recent") {
       sortOption = { createdAt: -1 }; // Most recent first
     } else if (sortQuery === "Graphics") {
       filter = { lan: { $in: ["Graphics"] } }; // Filter projects where "Graphics" is in the lan array

@@ -52,7 +52,7 @@ const Projects = () => {
                   : "bg-[#313030] hover:text-green-500"
               }`}
               onClick={() => {
-                fetchProjects("Recents");
+                fetchProjects("Recent");
                 setActiveRecent(true);
                 setActiveAZ(false);
                 setActiveGraphics(false);

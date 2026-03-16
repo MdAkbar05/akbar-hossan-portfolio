@@ -7,7 +7,7 @@ function ResumeButton({ isLeft = false }) {
       href="/MD-Akbar-Hossan-React-and-Nextjs-Developer-chittagong-01879808105.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      className={`absolute bottom-6 ${isLeft ? "left-6" : "right-6"} z-50`}
+      className={`absolute lg:bottom-6 top-6 ${isLeft ? "left-6" : "right-6"} z-50`}
     >
       <button
         title={`${isLeft ? "View Resume" : "Download Resume"}`}

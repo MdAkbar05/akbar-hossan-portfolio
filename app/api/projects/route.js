@@ -21,7 +21,7 @@ export async function POST(request) {
   } catch (error) {
     return NextResponse.json(
       { message: "Error", error: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -42,7 +42,21 @@ export async function GET(request) {
     } else if (sortQuery === "Graphics") {
       filter = { lan: { $in: ["Graphics"] } }; // Filter projects where "Graphics" is in the lan array
     } else if (sortQuery === "Web") {
-      filter = { lan: { $in: ["JavaScript" || "ReactJS"] } }; // Filter projects where "Web" is in the lan array
+      filter = {
+        lan: {
+          $in: [
+            "JavaScript" ||
+              "JS" ||
+              "ReactJS" ||
+              "React.js" ||
+              "Tailwind" ||
+              "Next.js" ||
+              "Node.js" ||
+              "HTML" ||
+              "CSS",
+          ],
+        },
+      }; // Filter projects where "Web" is in the lan array
     }
 
     // Fetch projects with filtering and sorting
@@ -53,7 +67,7 @@ export async function GET(request) {
     console.error("Error fetching projects:", error);
     return NextResponse.json(
       { message: "Error fetching projects", error: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -19,7 +19,10 @@ const Footer = () => {
         <p className="sm:text-[10px] md:text-base text-center font-thin  md:pb-0 flex items-center justify-center space-x-1">
           <span>Copyright</span>
           <AvatarLogo key={1} size={10} />
-          <span>© 2025 MD_Akbar_Hossan. All rights reserved </span>
+          <span>
+            © 2025 <a href="https://github.com/MdAkbar05">MD_Akbar_Hossan</a>.
+            All rights reserved{" "}
+          </span>
         </p>
       </div>
     </footer>

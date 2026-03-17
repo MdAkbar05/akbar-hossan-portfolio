@@ -128,7 +128,7 @@ export default function Achievements() {
                 <span className=" ">
                   Issued By <br />
                 </span>{" "}
-                <span className=" gradient-text  font-semibold">
+                <span className=" gradient-text   font-semibold">
                   {edu.issuedBy}
                 </span>{" "}
               </p>

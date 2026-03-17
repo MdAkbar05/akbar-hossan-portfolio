@@ -71,7 +71,7 @@ export default function Education() {
           >
             {/* Education Details */}
             <div className="text-primary dark:text-slate-300">
-              <h2 className="text-lg md:text-2xl font-semibold dark:text-quarterary text-secondary mb-2 text-center">
+              <h2 className="text-lg md:text-2xl font-semibold dark:text-quarterary text-secondary mb-2 text-center lightGradient-text">
                 {edu.degree}
               </h2>
               <p className="text-base md:text-lg  mb-1 text-center italic ">
@@ -98,7 +98,7 @@ export default function Education() {
                   className="object-cover"
                 />
               </div>
-              <h4 className="text-center">{edu.board}</h4>
+              <h4 className="text-center gradient-text">{edu.board}</h4>
               <div className="flex gap-3">
                 <button
                   className="buttonReverse dark:bg-tartiary dark:text-quarterary hover:bg-green-500 hover:text-white text-primary cursor-pointer"

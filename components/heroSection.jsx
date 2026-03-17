@@ -31,15 +31,15 @@ export default function HeroSection() {
           />
         </div>
         <div className="flex flex-col justify-center gap-4 m-0 px-2 lg:px-10">
-          <div className="space-y-1 text-center lg:text-start">
-            <h1 className=" sm:text-3xl md:text-5xl  titleFont font-semibold text-primary dark:text-quarterary ">
-              MD. Akbar Hossan
+          <div className="space-y-2 text-center lg:text-start">
+            <h1 className=" sm:text-3xl md:text-5xl  titleFont font-semibold   gradient-text">
+              Mastering in React.js & Next.js
             </h1>
-            <h2 className="dark:bright-text  sm:text-sm md:text-lg normalFont gradient-text dark:text-quarterary">
-              a React JS and Next Js Developer
+            <h2 className="dark:bright-text  sm:text-lg md:text-xl lg:text-3xl normalFont text-primary dark:text-quarterary">
+              MD. Akbar Hossan - B.Sc. in CSE
             </h2>
           </div>
-          <p className="sm:text-lg md:text-2xl nameFont text-primary dark:text-quarterary text-center lg:text-start">
+          <p className="sm:text-lg md:text-2xl nameFont text-primary dark:text-quarterary text-center lg:text-start ">
             I've been working as a React JS developer for{" "}
             {reactJsExperienceTime} <br /> and Next JS developer for{" "}
             {nextJsExperienceTime}.
@@ -47,7 +47,7 @@ export default function HeroSection() {
           <div className="space-x-4 py-2 mx-auto lg:mx-0">
             <Link
               href={"/contacts"}
-              className="titleFont hover:bg-green-500 hover:text-white cursor-pointer transition-all duration-300  bg-extra dark:bg-quarterary dark:text-primary py-1 px-4 text-white rounded-md w-fit shadow-[0_0_50px_rgb(30,259,200)]
+              className="titleFont hover:bg-green-500 hover:text-white cursor-pointer transition-all duration-300  bg-extra dark:bg-quarterary dark:text-primary py-1 px-4 text-white rounded-md w-fit shadow-[0_0_50px_rgb(0,220,8)]
     dark:shadow-[0_0_50px_rgb(36,19,131)]
   sm:text-sm md:text-balance"
             >

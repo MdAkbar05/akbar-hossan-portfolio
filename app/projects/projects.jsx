@@ -59,7 +59,7 @@ const Projects = () => {
                 setActiveWeb(false);
               }}
             >
-              Recents
+              Recent
             </div>
             <div
               className={`py-1 px-3 rounded-full cursor-pointer transition-colors ${
@@ -141,7 +141,7 @@ const Projects = () => {
               </div>
               <div>
                 <div className="flex flex-col gap-4 items-start justify-between h-full py-4 ">
-                  <h2 className="sm:text-lg md:text-2xl dark:gradient-text lightGradient-text sm:font-semibold md:font-bold uppercase text-center   py-1">
+                  <h2 className="sm:text-lg md:text-2xl dark:gradient-text gradient-text sm:font-semibold md:font-bold uppercase text-center  py-1">
                     {p?.title}
                   </h2>
 
@@ -160,7 +160,7 @@ const Projects = () => {
                         ))}
                   </p>
                   {/* created At date  */}
-                  <span className="text-green-400">
+                  <span className="lightGradient-text">
                     Publication Date: {p?.createdAt.split("T")[0]}
                   </span>
 

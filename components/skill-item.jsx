@@ -18,10 +18,10 @@ const SkillItem = ({ item }) => {
   };
 
   return (
-    <div className="relative flex flex-col md:flex-row w-full justify-between items-center dark:myborder myborderLight  bg-slate-200 text-secondary dark:text-quarterary dark:bg-extra md:p-4 sm:p-3 gap-2 md:gap-0 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 outershadow">
+    <div className="relative flex flex-col md:flex-row w-full justify-center items-center myborder  bg-slate-200 text-secondary dark:text-quarterary dark:bg-extra md:p-4 sm:p-3 gap-2 md:gap-0 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 outershadow min-h-full">
       {/* Horizontal Skill Card */}
       <div
-        className="flex sm:flex-col flex-row items-center  gap-4 cursor-pointer w-full md:w-2/3"
+        className="flex sm:flex-col flex-row items-center lg:items-start  gap-4 cursor-pointer w-full md:w-2/3  "
         onClick={toggleModal} // Open modal on click
       >
         <Image
@@ -31,7 +31,7 @@ const SkillItem = ({ item }) => {
           width="100"
           height="100"
         />
-        <div className="flex flex-col items-center md:items-start ">
+        <div className="flex flex-col items-center md:items-start gap-2 ">
           <h3 className="text-center md:text-lg sm:text-base font-bold dark:text-quarterary text-primary uppercase">
             {item.name}
           </h3>
@@ -72,8 +72,8 @@ const SkillItem = ({ item }) => {
             </div>
             <ol className=" font-light text-base dark:bg-tartiary bg-slate-200 text-primary dark:text-slate-200 p-4 rounded-lg shadow-inner">
               {item?.activity?.map((activity, index) => (
-                <li key={index} className="py-1 ">
-                  {activity}
+                <li key={index} className="py-2">
+                  ✅→ {activity}
                 </li>
               ))}
             </ol>

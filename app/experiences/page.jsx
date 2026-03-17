@@ -108,17 +108,17 @@ function ExperiencePage() {
           .map((exp) => (
             <div
               key={exp.id}
-              className="shadow-lg  border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra space-y-6"
+              className="shadow-lg  border-2 border-r-4 border-r-green-600 dark:border-secondary dark:border-r-green-600 border-slate-300 rounded-md bg-quarterary dark:bg-extra space-y-6"
             >
               {/* Company Info */}
-              <div className="flex lg:flex-row flex-col-reverse items-center gap-4 justify-between border-r-4 border-green-600 p-4">
+              <div className="flex lg:flex-row flex-col-reverse items-center gap-4 justify-between  p-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-xl font-semibold">
                     <span className="text-2xl">{exp.icon}</span>
                     {exp.company}
                   </div>
 
-                  <p className="font-medium">{exp.role}</p>
+                  <p className="font-medium gradient-text">{exp.role}</p>
                   <p className="text-sm opacity-70">{exp.duration}</p>
                   <p className="text-sm opacity-70">{exp.location}</p>
 

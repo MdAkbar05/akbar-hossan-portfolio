@@ -8,7 +8,7 @@ function ResumeButton({ isLeft = false }) {
       download={isLeft ? false : true}
       target="_blank"
       rel="noopener noreferrer"
-      className={`absolute  ${isLeft ? "left-6" : "right-6"} sm:top-2/5 z-50`}
+      className={`absolute  ${isLeft ? "left-6" : "right-6"} sm:top-2/5 z-10`}
     >
       <button
         title={`${isLeft ? "View Resume" : "Download Resume"}`}

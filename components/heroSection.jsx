@@ -47,7 +47,7 @@ export default function HeroSection() {
           <div className="space-x-4 py-2 mx-auto lg:mx-0">
             <Link
               href={"/contacts"}
-              className="titleFont hover:bg-green-500 hover:text-white cursor-pointer transition-all duration-300  bg-extra dark:bg-quarterary dark:text-primary py-1 px-4 text-white rounded-md w-fit shadow-[0_0_50px_rgb(0,220,8)]
+              className="titleFont hover:bg-green-500 hover:text-white cursor-pointer transition-all duration-300  bg-green-600 border-2 dark:border-blue-500  border-green-400 dark:bg-quarterary dark:text-primary py-1 px-4 text-white rounded-md w-fit shadow-[0_0_50px_rgb(0,220,8)]
     dark:shadow-[0_0_50px_rgb(36,19,131)]
   sm:text-sm md:text-balance"
             >

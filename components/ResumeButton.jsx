@@ -18,27 +18,21 @@ function ResumeButton({ isLeft = false }) {
             rounded-full
             cursor-pointer
             transition-all duration-300
-
-            /* Light mode — green theme */
             bg-green-100
             text-green-600
             ring-1 ring-green-300
             shadow-[0_0_12px_rgba(0,180,80,0.2)]
-
-            /* Dark mode — blue theme */
             dark:bg-slate-800
             dark:text-blue-400
             dark:ring-slate-700
             dark:shadow-none
 
-            /* Hover — light */
             hover:bg-green-500
             hover:text-white
             hover:ring-green-400
             hover:shadow-[0_0_22px_rgba(0,200,80,0.55)]
             hover:scale-110
 
-            /* Hover — dark */
             dark:hover:bg-blue-600
             dark:hover:text-white
             dark:hover:ring-blue-500

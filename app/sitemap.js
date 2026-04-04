@@ -1,7 +1,6 @@
 // app/sitemap.ts
-import { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default function sitemap() {
   return [
     {
       url: "https://akbar-hossan-portfolio.vercel.app",

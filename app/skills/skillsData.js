@@ -1,13 +1,14 @@
-import Bootstrap from "@/public/assets/skills/bootstrap.svg";
-import ReactJS from "@/public/assets/skills/ReactJS.svg";
-import NodeJS from "@/public/assets/skills/NodeJs.svg";
-import ExpressJS from "@/public/assets/skills/Express.svg";
-import MongoDB from "@/public/assets/skills/MongoDB.svg";
-import Tailwind from "@/public/assets/skills/Tailwind.svg";
-import Javascript from "@/public/assets/skills/Javascript.svg";
-import HtmlCSS from "@/public/assets/skills/HtmlCss.svg";
+// ✅ Correct — matches exact filenames on disk
+import Bootstrap from "@/public/assets/skills/bootstrap.svg"; // ← lowercase b
+import Express from "@/public/assets/skills/Express.svg";
 import Git from "@/public/assets/skills/git.svg";
-import nextjs from "@/public/assets/skills/nextjs.svg";
+import HtmlCSS from "@/public/assets/skills/HtmlCss.svg";
+import Javascript from "@/public/assets/skills/Javascript.svg";
+import MongoDB from "@/public/assets/skills/MongoDB.svg";
+import NextJs from "@/public/assets/skills/nextjs.svg"; // ← all lowercase
+import NodeJs from "@/public/assets/skills/NodeJs.svg";
+import ReactJS from "@/public/assets/skills/ReactJS.svg";
+import Tailwind from "@/public/assets/skills/Tailwind.svg";
 
 export const skills = [
   {
@@ -81,7 +82,7 @@ export const skills = [
   },
   {
     id: 6,
-    src: NodeJS,
+    src: NodeJs,
     name: "Node.js",
     activity: [
       "Built scalable and efficient backend services using Node.js",
@@ -95,7 +96,7 @@ export const skills = [
   },
   {
     id: 7,
-    src: ExpressJS,
+    src: Express,
     name: "Express.js",
     activity: [
       "Developed robust REST APIs using Express middleware architecture",
@@ -137,7 +138,7 @@ export const skills = [
   },
   {
     id: 10,
-    src: nextjs,
+    src: NextJs,
     name: "Next.js",
     activity: [
       "Built full-stack web applications using Next.js (App Router and Pages Router)",

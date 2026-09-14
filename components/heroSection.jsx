@@ -23,18 +23,19 @@ export default function HeroSection() {
           <div className="absolute inset-0 rounded-full blur-2xl opacity-30 bg-green-500 dark:bg-blue-500 scale-110 pointer-events-none" />
 
           {/* Download Resume — bottom-left */}
-          <div className="absolute -bottom-4 -left-10 z-10">
+          <div className="absolute -bottom-3 left-0 z-10 sm:-bottom-4 sm:-left-10">
             <ResumeButton isLeft={false} />
           </div>
 
           {/* View Resume — bottom-right */}
-          <div className="absolute -bottom-4 -right-7 z-10">
+          <div className="absolute -bottom-3 right-0 z-10 sm:-bottom-4 sm:-right-7">
             <ResumeButton isLeft={true} />
           </div>
 
           {/* Photo circle */}
           <div
-            className="relative sm:w-44 sm:h-44 md:w-60 md:h-60 rounded-full overflow-hidden
+            className="relative h-40 w-40 rounded-full overflow-hidden
+            sm:h-44 sm:w-44 md:h-60 md:w-60
             ring-2 ring-green-500 dark:ring-blue-500
             shadow-[0_0_40px_rgba(0,200,80,0.25)] dark:shadow-[0_0_40px_rgba(36,19,200,0.3)]"
           >
@@ -65,7 +66,7 @@ export default function HeroSection() {
             </h1>
             {/* Specialisation — now a supporting subtitle */}
             <h2 className="sm:text-base md:text-lg lg:text-xl normalFont text-slate-500 dark:text-slate-400 font-medium">
-              React.js &amp; Next.js Specialist &nbsp;·&nbsp; B.Sc. CSE
+              React.js &amp; Next.js Specialist &nbsp;·&nbsp; B.Sc. in CSE
             </h2>
           </div>
 

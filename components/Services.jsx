@@ -14,7 +14,7 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      icon: <FaCode size={40} className="text-quarterary" />,
+      icon: <FaCode size={22} />,
       title: "Frontend Development",
       description:
         "Building responsive and modern websites using the latest technologies like React, Next.js, and Tailwind CSS.",
@@ -30,7 +30,7 @@ export default function Services() {
     },
     {
       id: 2,
-      icon: <FaDatabase size={40} className="text-quarterary" />,
+      icon: <FaDatabase size={22} />,
       title: "Backend Development",
       description:
         "Developing scalable and secure backend systems using Node.js, Express, and MongoDB.",
@@ -46,7 +46,7 @@ export default function Services() {
     },
     {
       id: 3,
-      icon: <FaMobileAlt size={40} className="text-quarterary" />,
+      icon: <FaMobileAlt size={22} />,
       title: "Full Stack Development",
       description:
         "Creating cross-platform mobile applications with a focus on performance and user experience.",
@@ -63,40 +63,48 @@ export default function Services() {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
         <div
           key={service.id}
-          className="dark:bg-extra bg-quarterary p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center items-center text-center border dark:border-secondary border-slate-300"
+          className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-white/10 dark:bg-extra"
         >
-          <div className="flex items-center justify-center mb-4 gap-2">
-            <div className=" w-[50%] flex flex-col justify-center items-center p-4">
-              {/* <div className="mb-4">{service.icon}</div> */}
-              <div className="mb-4">{service.icon}</div>
-              <h2 className="text-lg md:text-2xl font-semibold mb-2 gradient-text">
-                {service.title}
-              </h2>
-            </div>
-            <div className="w-[50%]  ">
-              <Image
-                src={service.img}
-                alt={service.title}
-                width={200}
-                height={200}
-                className="object-cover myborder rounded-lg shadow-lg outershadow2 transition-all duration-300"
-              />
+          <div className="relative h-40 overflow-hidden">
+            <Image
+              src={service.img}
+              alt=""
+              fill
+              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+              className="object-cover grayscale transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-extra/80 via-extra/10 to-transparent" />
+            <div className="absolute bottom-4 left-5 flex h-11 w-11 items-center justify-center rounded-lg bg-emerald-500 text-white shadow-lg dark:bg-blue-500">
+              {service.icon}
             </div>
           </div>
-          <p className="text-gray-700 dark:text-gray-300">
-            {service.description}
-          </p>
-          <div className="mt-4 space-x-4">
-            <button
-              className="buttonReverse dark:bg-tartiary dark:text-quarterary hover:bg-green-500 hover:text-white text-primary cursor-pointer"
-              onClick={() => setSelectedService(service)}
-            >
-              See Pricing
-            </button>
+          <div className="flex flex-1 flex-col p-5">
+            <h2 className="text-xl font-semibold tracking-tight md:text-2xl">
+              {service.title}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-gray-300">
+              {service.description}
+            </p>
+            <ul className="mt-5 space-y-2 text-sm text-slate-500 dark:text-slate-400">
+              {service.features.slice(0, 3).map((feature) => (
+                <li key={feature} className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500 dark:bg-blue-400" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto pt-6">
+              <button
+                className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-emerald-500 hover:text-emerald-600 dark:border-white/15 dark:text-quarterary dark:hover:border-blue-400 dark:hover:text-blue-400"
+                onClick={() => setSelectedService(service)}
+              >
+                View pricing
+              </button>
+            </div>
           </div>
         </div>
       ))}

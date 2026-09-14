@@ -6,9 +6,37 @@ import getProjects from "@/lib/api-request/get-projects";
 import returnArray from "@/lib/utils";
 import { CldImage } from "next-cloudinary";
 import { MdSort } from "react-icons/md";
+import { LuImage } from "react-icons/lu";
 
 import ProjectLoader from "@/components/loaders/projectLoader";
 import { FaHighlighter } from "react-icons/fa";
+
+const ProjectThumbnail = ({ image, title }) => {
+  const [hasImageError, setHasImageError] = useState(false);
+  const imageSource = typeof image === "string" ? image.trim() : "";
+
+  if (!imageSource || hasImageError) {
+    return (
+      <div className="flex h-full min-h-44 flex-col items-center justify-center gap-3 bg-gradient-to-br from-slate-100 via-emerald-50 to-slate-200 px-6 text-center text-slate-500 dark:from-extra dark:via-primary dark:to-secondary dark:text-slate-300">
+        <LuImage size={48} strokeWidth={1.5} />
+        <span className="text-sm font-medium uppercase tracking-widest">
+          {title || "Project preview"}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <CldImage
+      src={imageSource}
+      alt={title || "Project preview"}
+      fill
+      sizes="(max-width: 649px) 100vw, 50vw"
+      onError={() => setHasImageError(true)}
+      className="rounded-md object-cover dark:rounded-2xl"
+    />
+  );
+};
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -131,12 +159,7 @@ const Projects = () => {
               className="flex flex-col md:flex-row sm:gap-0 md:gap-4 col-span-2 max-h-fit sm:p-4 md:p-2 border-2 dark:border-secondary border-slate-300 rounded-md bg-quarterary dark:bg-extra"
             >
               <div className="relative sm:h-44 md:h-56 lg:h-[490px] sm:w-full md:w-1/2 lg:w-1/2 rounded-md dark:rounded-2xl overflow-hidden">
-                <CldImage
-                  src={p.img}
-                  alt={p.title}
-                  fill
-                  className="object-cover  rounded-md dark:rounded-2xl"
-                />
+                <ProjectThumbnail image={p?.img} title={p?.title} />
                 <div className="md:block sm:hidden absolute z-10  w-full h-full top-0 bg-gradient-to-l dark:from-extra from-quarterary from-5% to-transparent to-50%"></div>
               </div>
               <div>
@@ -145,7 +168,7 @@ const Projects = () => {
                     {p?.title}
                   </h2>
 
-                  <p className="sm:text-sm md:text-base text-gray-400  py-1 ">
+                  <ul className="w-full max-w-2xl space-y-2 py-1">
                     {p?.desc &&
                       p.desc
                         .split(".")
@@ -153,12 +176,13 @@ const Projects = () => {
                         .map((sentence, index) => (
                           <li
                             key={index}
-                            className="sm:text-sm md:text-base dark:text-gray-400 text-secondary py-1 dark:bg-primary bg-slate-200 my-2 rounded-lg px-2 list-none shadow-md flex items-center gap-2"
+                            className="flex items-start gap-3 rounded-lg border border-slate-200/80 bg-slate-50 px-3 py-2 text-sm leading-relaxed text-secondary transition-colors hover:border-emerald-300 hover:bg-emerald-50 dark:border-white/10 dark:bg-primary/70 dark:text-gray-300 dark:hover:border-blue-500/50 dark:hover:bg-extra sm:text-sm md:text-base"
                           >
-                            <FaHighlighter /> {sentence.trim()}.
+                            <FaHighlighter className="mt-1 shrink-0 text-emerald-600 dark:text-blue-400" />
+                            <span>{sentence.trim()}.</span>
                           </li>
                         ))}
-                  </p>
+                  </ul>
                   {/* created At date  */}
                   <span className="lightGradient-text">
                     Publication Date: {p?.createdAt.split("T")[0]}

@@ -12,6 +12,7 @@ import { LuActivity } from "react-icons/lu";
 import { MdCastForEducation } from "react-icons/md";
 import { TbCertificate } from "react-icons/tb";
 import { IoHomeOutline } from "react-icons/io5";
+import { LuMenu, LuX } from "react-icons/lu";
 import ViewCounter from "./ViewCounter";
 
 const Navbar = () => {
@@ -59,68 +60,49 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full  flex justify-center items-center bg-white dark:bg-primary/95   backdrop-blur-xl sticky top-0 z-50 dark:shadow-secondary shadow-sm">
-      <nav className="container mx-auto flex justify-between items-center text-primary dark:text-quarterary px-2">
-        <AvatarLogo key={1} size={14} />
-        {/* for Desktop  */}
-        <ul className="sm:hidden md:flex gap-6 px-4 py-2 rounded-md text-lg">
-          <li
-            className={`group relative px-3 cursor-pointer ${
-              router === "/"
-                ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary rounded-lg text-sm font-medium shadow-md"
-                : ""
-            }`}
-          >
-            <Link href="/">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full hover:text-blue-500">
-                <IoHomeOutline size={28} />
-              </div>
-              <span className="absolute top-0 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-primary">
-                Home
-              </span>
-            </Link>
-          </li>
-          {navigation.map((nav, index) => (
-            <li
-              key={index}
-              className={`group relative px-3 cursor-pointer ${
-                router === nav.href
-                  ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary rounded-lg text-sm font-medium shadow-md"
-                  : ""
-              }`}
+    <div className="w-full flex justify-center items-center border-b border-slate-200/80 bg-white/90 backdrop-blur-xl sticky top-0 z-50 dark:border-white/10 dark:bg-primary/95">
+      <nav className="container mx-auto flex min-h-[4.5rem] justify-between items-center text-primary dark:text-quarterary px-4 lg:px-6">
+        <div className="flex items-center gap-2">
+          <div className="relative flex md:hidden">
+            <button
+              onClick={() => setIsMenu(!isMenu)}
+              aria-expanded={isMenu}
+              aria-label={
+                isMenu ? "Close navigation menu" : "Open navigation menu"
+              }
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-primary transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 dark:border-white/10 dark:text-quarterary dark:hover:bg-white/10"
             >
-              <Link prefetch={nav.prefetch} href={nav.href}>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full hover:text-blue-500">
-                  {nav.icon}
-                </div>
-                <span className="absolute top-0 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 text-primary">
-                  {nav.name}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        {/* for mobile  */}
-
-        <div className=" flex gap-2 items-center justify-center">
-          <ViewCounter />
-          <DarkModeToggle />
-          <div className="sm:flex md:hidden">
-            <button onClick={() => setIsMenu(!isMenu)}>MENU</button>
+              {isMenu ? (
+                <LuX size={22} strokeWidth={2.25} />
+              ) : (
+                <LuMenu size={22} strokeWidth={2.25} />
+              )}
+            </button>
             {isMenu && (
               <>
-                <div
-                  className="fixed inset-0 h-screen bg-black opacity-50"
+                <button
+                  aria-label="Close navigation menu"
+                  className="fixed inset-0 z-40 h-screen w-screen cursor-default bg-slate-950/30 backdrop-blur-[2px]"
                   onClick={() => setIsMenu(false)}
-                ></div>
-                <ul className="absolute top-10 right-0 flex flex-col gap-2 px-4 py-2 rounded-md text-lg bg-quarterary text-primary dark:bg-primary dark:text-quarterary">
+                ></button>
+                <ul className="absolute left-0 top-full z-50 mt-3 flex w-56 flex-col gap-1 rounded-xl border border-slate-200 bg-white p-2 text-base text-primary shadow-xl dark:border-white/10 dark:bg-primary dark:text-quarterary">
+                  <li
+                    onClick={() => setIsMenu(false)}
+                    className={`rounded-lg px-4 py-3 transition-colors hover:bg-slate-100 dark:hover:bg-white/10 ${
+                      router === "/"
+                        ? "bg-emerald-50 font-semibold text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300"
+                        : ""
+                    }`}
+                  >
+                    <Link href="/">Home</Link>
+                  </li>
                   {navigation.map((nav, index) => (
                     <li
                       key={index}
                       onClick={() => setIsMenu(false)}
-                      className={`navButton dark:navButtonDark hover:bg-secondary hover:text-quarterary ${
+                      className={`rounded-lg px-4 py-3 transition-colors hover:bg-slate-100 dark:hover:bg-white/10 ${
                         router === nav.href
-                          ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary"
+                          ? "bg-emerald-50 font-semibold text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300"
                           : ""
                       }`}
                     >
@@ -133,16 +115,58 @@ const Navbar = () => {
               </>
             )}
           </div>
+          <AvatarLogo key={1} size={14} />
         </div>
-        <div className="sm:hidden md:flex">
-          <Link
-            href={"/contacts"}
-            className="relative normalFont inline-flex items-center justify-start  px-5 py-2  overflow-hidden font-semibold transition-all bg-green-600 ring-4 dark:ring-secondary ring-quarterary rounded-full hover:bg-white group"
+        {/* for Desktop  */}
+        <ul className="hidden items-center gap-2 px-4 py-2 text-lg md:flex lg:gap-4">
+          <li
+            className={`group relative cursor-pointer rounded-xl px-3 py-2 transition-colors ${
+              router === "/"
+                ? "bg-slate-100 text-emerald-600 dark:bg-white/10 dark:text-emerald-400"
+                : ""
+            }`}
           >
-            <span className="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-            <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-tartiary ">
-              Get In Touch
-            </span>
+            <Link href="/">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full">
+                <IoHomeOutline size={28} />
+              </div>
+              <span className="pointer-events-none absolute left-1/2 top-full z-20 -translate-x-1/2 translate-y-1 scale-95 whitespace-nowrap rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-primary opacity-0 shadow-md transition-all duration-200 group-hover:translate-y-2 group-hover:scale-100 group-hover:opacity-100 group-focus-within:translate-y-2 group-focus-within:scale-100 group-focus-within:opacity-100 dark:border-white/10 dark:bg-primary dark:text-quarterary">
+                Home
+              </span>
+            </Link>
+          </li>
+          {navigation.map((nav, index) => (
+            <li
+              key={index}
+              className={`group relative cursor-pointer rounded-xl px-3 py-2 transition-colors ${
+                router === nav.href
+                  ? "bg-slate-100 text-emerald-600 dark:bg-white/10 dark:text-emerald-400"
+                  : ""
+              }`}
+            >
+              <Link prefetch={nav.prefetch} href={nav.href}>
+                <div className="flex h-9 w-9 items-center justify-center rounded-full">
+                  {nav.icon}
+                </div>
+                <span className="pointer-events-none absolute left-1/2 top-full z-20 -translate-x-1/2 translate-y-1 scale-95 whitespace-nowrap rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-primary opacity-0 shadow-md transition-all duration-200 group-hover:translate-y-2 group-hover:scale-100 group-hover:opacity-100 group-focus-within:translate-y-2 group-focus-within:scale-100 group-focus-within:opacity-100 dark:border-white/10 dark:bg-primary dark:text-quarterary">
+                  {nav.name}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {/* for mobile  */}
+
+        <div className="flex items-center justify-center gap-2">
+          <div className="hidden md:block">
+            <ViewCounter />
+          </div>
+          <DarkModeToggle />
+          <Link
+            href="/contacts"
+            className="hidden rounded-full bg-emerald-600 px-4 py-2 text-sm font-semibold tracking-wide text-white shadow-sm transition-colors hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 md:flex md:px-5 md:text-base dark:bg-emerald-500  dark:hover:bg-emerald-400 dark:focus-visible:ring-offset-primary"
+          >
+            Get In Touch
           </Link>
         </div>
       </nav>
@@ -151,18 +175,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-{
-  /* <Link prefetch={nav.prefetch} href={nav.href}>
-              <li
-                key={index}
-                className={`navButton dark:navButtonDark hover:bg-secondary hover:text-quarterary ${
-                  router === nav.href
-                    ? "dark:bg-quarterary dark:text-primary bg-slate-500 text-quarterary"
-                    : ""
-                }`}
-              >
-                {nav.name}
-              </li>
-            </Link> */
-}

@@ -4,6 +4,7 @@ import Diit from "@/public/assets/educations/diit_logo.png";
 import ICT_Division from "@/public/assets/sponsor-img/DYD_LOGO.webp";
 import EDGE from "@/public/assets/sponsor-img/EDGE_LOGO.webp";
 import Ostad from "@/public/assets/sponsor-img/OSTAD_LOGO.webp";
+import EDU_Computer_Club from "@/public/assets/sponsor-img/edu-computer-club.webp";
 // Certificate image import
 
 import EDGE_Certi from "@/public/assets/achievements/Certificate-of-Video-Production-&-Editing-EDGE-CUET-MD-Akbar-Hossan.png";
@@ -13,6 +14,7 @@ import DigitalMarketing from "@/public/assets/achievements/basicOfDigitalMarketi
 import Ostad_Certi from "@/public/assets/achievements/mern-stack-certificate-akbar-hossan.png";
 import postman_certi from "@/public/assets/achievements/basics-of-web-application-and-postman.png";
 import CyberSecurity from "@/public/assets/achievements/Fundamentals-of-cyber-security.png";
+import contest_certificate from "@/public/assets/achievements/edu-programming-contest-certificate.jpg";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -100,6 +102,18 @@ export default function Achievements() {
       providerImage: EDGE,
       certificate: EDGE_Certi, // Add certificate image path
       reference: "https://itbi-cuet.com/edge-courses/",
+    },
+    {
+      id: 8,
+      course:
+        "Certificate of Participation in EDU Intra-University Programming Contest | Fall 2026",
+      issuedBy: "EDU Computer Club",
+      date: "20-OCT-2026",
+      duration: "3 month",
+      certificateId: "EDU-PC-2026-001",
+      providerImage: EDU_Computer_Club,
+      certificate: contest_certificate,
+      reference: "https://www.linkedin.com/in/edu-computer-club/",
     },
   ];
 

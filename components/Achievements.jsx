@@ -5,6 +5,7 @@ import ICT_Division from "@/public/assets/sponsor-img/DYD_LOGO.webp";
 import EDGE from "@/public/assets/sponsor-img/EDGE_LOGO.webp";
 import Ostad from "@/public/assets/sponsor-img/OSTAD_LOGO.webp";
 import EDU_Computer_Club from "@/public/assets/sponsor-img/edu-computer-club.webp";
+import learnWithSumit from "@/public/assets/sponsor-img/lwsLogo.svg";
 // Certificate image import
 
 import EDGE_Certi from "@/public/assets/achievements/Certificate-of-Video-Production-&-Editing-EDGE-CUET-MD-Akbar-Hossan.png";
@@ -14,6 +15,7 @@ import DigitalMarketing from "@/public/assets/achievements/basicOfDigitalMarketi
 import Ostad_Certi from "@/public/assets/achievements/mern-stack-certificate-akbar-hossan.png";
 import postman_certi from "@/public/assets/achievements/basics-of-web-application-and-postman.png";
 import CyberSecurity from "@/public/assets/achievements/Fundamentals-of-cyber-security.png";
+import learn_with_sumit_certi from "@/public/assets/achievements/LWS-Report-Card-copy.webp";
 import contest_certificate from "@/public/assets/achievements/edu-programming-contest-certificate.jpg";
 
 import Image from "next/image";
@@ -94,6 +96,17 @@ export default function Achievements() {
     },
     {
       id: 7,
+      course: "Reactive Accelerator | Batch 3",
+      issuedBy: "Learn with Sumit",
+      date: "01-Oct-2025",
+      duration: "6 months",
+      certificateId: "LWSCTXN-VGPY2LD4",
+      providerImage: learnWithSumit,
+      certificate: learn_with_sumit_certi,
+      reference: "https://learnwithsumit.com/",
+    },
+    {
+      id: 8,
       course: "Video Production & Editing",
       issuedBy: "Enhancing Digital Government and Economy (EDGE) under CUET",
       date: "06-Apr-2025",
@@ -104,11 +117,11 @@ export default function Achievements() {
       reference: "https://itbi-cuet.com/edge-courses/",
     },
     {
-      id: 8,
+      id: 9,
       course:
         "Certificate of Participation in EDU Intra-University Programming Contest | Fall 2026",
       issuedBy: "EDU Computer Club",
-      date: "20-OCT-2026",
+      date: "20-Oct-2026",
       duration: "3 days",
       certificateId: "EDU-PC-2026-001",
       providerImage: EDU_Computer_Club,
@@ -158,7 +171,7 @@ export default function Achievements() {
             </div>
             {/* Education Board Image */}
             <div className="flex flex-col gap-4 items-center">
-              <div className="w-40 h-24 flexCenter  bg-gray-200 p-3 rounded-md">
+              <div className="w-40 h-24 flexCenter  bg-gray-200 p-3 rounded-md overflow-hidden">
                 <Image
                   src={edu.providerImage}
                   alt={`${edu.board} logo`}

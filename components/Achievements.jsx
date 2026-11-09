@@ -109,7 +109,7 @@ export default function Achievements() {
         "Certificate of Participation in EDU Intra-University Programming Contest | Fall 2026",
       issuedBy: "EDU Computer Club",
       date: "20-OCT-2026",
-      duration: "3 month",
+      duration: "3 days",
       certificateId: "EDU-PC-2026-001",
       providerImage: EDU_Computer_Club,
       certificate: contest_certificate,
